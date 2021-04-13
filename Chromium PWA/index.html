@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Chromium PWA</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="images/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="images/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#f69435"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="style.css">
+
+
+    <script src="./app.js"></script>
+</head>
+
+<body>
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <img src="images/logo.png" alt="Logo">
+            <span class="ml-3 text-xl">chromium</span>
+          </a>
+          <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+            <a class="mr-5 hover:text-gray-900" href="#">System Info</a>
+            <a class="mr-5 hover:text-gray-900" href="diagnostic-manager.html"> Diagnostics Manager</a>
+            <a class="mr-5 hover:text-gray-900" href="system-manager.html">System Manager</a>
+          </nav>
+          <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
+            <a href="https://www.chromium.org/Home" target="_blank">Go To Chromium.org</a>
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
+    </header>
+    <hr>
+    <span class="ml-3 text-xl">System Information</span>
+    <!--Edit....................
+      <div class="wrapper">
+        <div id="info" class="section">
+          <div class="box">
+            <label for="operating-system"></label>
+            <div id="operating-system" class="info"></div>
+            <label for="platform"></label>
+            <div id="platform" class="small info"></div>
+          </div>
+          <div class="box">
+            <label for="chrome-version"></label>
+            <div id="chrome-version" class="small info"></div>
+          </div>
+        </div>
+        <div id="cpu" class="section">
+          <div class="box">
+            <label for="cpu-name"></label>
+            <div id="cpu-name" class="info"></div>
+            <label for="cpu-arch"></label>
+            <div id="cpu-arch" class="info"></div>
+            <label for="cpu-features"></label>
+            <div id="cpu-features" class="small info"></div>
+          </div>
+          <div class="box">
+            <label for="cpu-usage"></label>
+            <div id="cpu-usage" class="info"></div>
+            <label for="cpu-temperatures"></label>
+            <div id="cpu-temperatures" class="small info"></div>
+          </div>
+        </div>
+        <div id="storage" class="section hidden">
+          <div id="internal-storage" class="box">
+            <label for="internal-storage-units"></label>
+            <div id="internal-storage-units" class="small info"></div>
+          </div>
+          <div id="external-storage" class="box">
+            <label for="external-storage-units"></label>
+            <div id="external-storage-units" class="small info"></div>
+          </div>
+        </div>
+        <div id="memory" class="section">
+          <div class="box">
+            <label for="memory-capacity"></label>
+            <div id="memory-capacity" class="info"></div>
+          </div>
+          <div class="box">
+            <label for="memory-usage"></label>
+            <div id="memory-usage" class="info"></div>
+          </div>
+        </div>
+        <div id="network" class="section">
+          <div class="box">
+            <label for="internet-state"></label>
+            <div id="internet-state" class="info"></div>
+          </div>
+          <div class="box">
+            <label for="local-adapters"></label>
+            <div id="local-adapters" class="small info"></div>
+          </div>
+        </div>
+        <div id="battery" class="section hidden">
+          <div class="box">
+            <label for="battery-status"></label>
+            <div id="battery-status" class="info"></div>
+            <label for="battery-time"></label>
+            <div id="battery-time" class="small info"></div>
+          </div>
+          <div class="box">
+            <label for="battery-level"></label>
+            <div id="battery-level" class="info">
+              <div class="bar">
+                <span class="bar-section used"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="displays" class="section">
+          <div class="box">
+            <label for="primary-display"></label>
+            <div id="primary-display" class="info"></div>
+          </div>
+          <div class="box">
+            <label for="other-displays"></label>
+            <div id="other-displays" class="small info"></div>
+          </div>
+        </div>
+        <div id="languages" class="section">
+          <div class="box">
+            <label for="language"></label>
+            <div id="language" class="info"></div>
+          </div>
+          <div class="box">
+            <label for="accept-languages"></label>
+            <div id="accept-languages" class="small info"></div>
+          </div>
+        </div>
+        <div id="plugins" class="section hidden">
+          <div class="box">
+            <label for="plugins-list"></label>
+            <div id="plugins-list" class="small info"></div>
+          </div>
+        </div>
+      </div>-->
+<script src="./main.js"></script>
+
+</body>
+
+</html>
