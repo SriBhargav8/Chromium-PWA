@@ -13,9 +13,9 @@ You can Download the code or You can clone the repository
 
 Screen Shot Of Chromium PWA 
 <br> 
-<img alt="Chromium PWA" src="https://github.com/SriBhargav8/Chromium-PWA/blob/main/Chromium%20PWA/images/ChromiumPWA.PNG" width=350px/> 
+<img alt="Chromium PWA" src="https://github.com/SriBhargav8/Chromium-PWA/blob/main/Chromium%20PWA/images/ChromiumPWA.PNG" width=500px/> 
 <hr> 
 Lighthouse Report
 <br> 
-<img alt="Google Lighthouse Report" src="https://github.com/SriBhargav8/Chromium-PWA/blob/main/Chromium%20PWA/images/Lighthouse.PNG" width=350px/>
+<img alt="Google Lighthouse Report" src="https://github.com/SriBhargav8/Chromium-PWA/blob/main/Chromium%20PWA/images/Lighthouse.PNG" width=500px/>
 
